@@ -735,12 +735,12 @@ ul.list-justify > li span {
 
 .btn-primary {
   background-color: #20a69b;
-  border-color: #00a0f0;
+  border-color: #39b54a;
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #00a0f0;
-  border-color: #00a0f0;
+  background-color: #39b54a;
+  border-color: #39b54a;
 }
 
 .btn-warning {

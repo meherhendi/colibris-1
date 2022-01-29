@@ -8,8 +8,13 @@ class Sidebar extends Component {
         <nav>
           <ul className="nav">
             <li>
-              <a href="index.html" className="active">
+              <a href="/#history" className="">
                 <i class="fas fa-history"></i><span>History</span>
+              </a>
+            </li>
+            <li>
+              <a href="/#users" className="">
+              <i class="fas fa-users"></i><span>Users</span>
               </a>
             </li>
           </ul>

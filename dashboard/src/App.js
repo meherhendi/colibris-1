@@ -3,6 +3,7 @@ import Markers from "./components/markers.component";
 import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import TopBar from "./components/TopBar";
 import Sidebar from "./components/Sidebar"
+import Users from "./components/Users";
 function App() {
   return (
     <div id="wrapper">
@@ -19,6 +20,11 @@ function App() {
                   exact
                   path="/history"
                   component={ListAppointments}
+                />
+                <Route
+                  exact
+                  path="/users"
+                  component={Users}
                 />
                 <Route exact path="/markers" component={Markers} />
               </Switch>

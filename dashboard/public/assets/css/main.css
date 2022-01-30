@@ -2344,5 +2344,7 @@ ul.activity-timeline > li:last-child:after {
   width: 22px;
   border: 1px solid #ccc;
 }
-
+.logo {
+  width: 30px;
+}
 /*# sourceMappingURL=main.css.map */

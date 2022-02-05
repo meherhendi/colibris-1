@@ -2,9 +2,12 @@ const router = require("express").Router();
 let Client = require("../models/client.model");
 const axios = require("axios")
 router.route('/map').get(async (req, res)=>{
-  console.log(`https://maps.googleapis.com/maps/api/geocode/json?address=${req.query.address}&key=AIzaSyBOqJFEL9f1qDYOZv9PPcEHOXGR0-V5vCU`)  
   let response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${req.query.address}&key=AIzaSyBOqJFEL9f1qDYOZv9PPcEHOXGR0-V5vCU`)
-  res.json(response.data.results[0].geometry.location); 
+  map =   `https://www.google.com/maps/embed/v1/view?key=${process.env.API_KEY}&center=${response.data.results[0].geometry.location.lat},${response.data.results[0].geometry.location.lng}&zoom=18`
+  res.setHeader('Content-Type', 'text/html');
+  let html = '<iframe src='+map+' height="450" width="600" style="border:0" loading="lazy" allowfullscreen></iframe>'
+  res.send(html);
+
 })
 
 //get All clients
